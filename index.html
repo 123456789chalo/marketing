@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/CHALOX_STYLE.jpg" type="image/x-icon">
+    <title>Domine o Mercado Digital | Curso Premium</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        /* NOTIFICAÇÃO ROXA (SUCESSO) */
+        .notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #8a2be2, #6a1b9a);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.4);
+            z-index: 1001;
+            max-width: 350px;
+            border-left: 5px solid #fff;
+            animation: slideIn 0.5s forwards, fadeOut 0.5s 4.5s forwards;
+            transform: translateX(200%);
+        }
+        
+        /* NOTIFICAÇÃO VERMELHA (ERRO) */
+        .error-notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff3333, #cc0000);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(255, 51, 51, 0.4);
+            z-index: 1001;
+            max-width: 350px;
+            border-left: 5px solid #fff;
+            animation: slideIn 0.5s forwards, fadeOut 0.5s 4.5s forwards;
+            transform: translateX(200%);
+        }
+        
+        @keyframes slideIn {
+            to { transform: translateX(0); }
+        }
+        
+        @keyframes fadeOut {
+            to { opacity: 0; }
+        }
+        
+        .notification-content, .error-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .notification-icon {
+            font-size: 28px;
+            color: #fff;
+        }
+        
+        .error-icon {
+            font-size: 28px;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .notification-text strong, .error-text strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #8a2be2, #9932cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #ffffff, #d8bfd8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .highlight-box {
+            background: rgba(138, 43, 226, 0.1);
+            border-left: 4px solid #8a2be2;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .video-container {
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+            position: relative;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b0b0b0;
+            border: 1px solid #2a2a2a;
+        }
+        
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .benefits-list {
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            color: #8a2be2;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .purchase-box {
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a2a2a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .purchase-box:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #8a2be2, #9932cc);
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        .price .original {
+            font-size: 24px;
+            color: #b0b0b0;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        
+        .price .discount {
+            font-size: 18px;
+            color: #8a2be2;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .pix-badge {
+            background: rgba(138, 43, 226, 0.2);
+            color: #8a2be2;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .pix-container {
+            background: #1a1a1a;
+            border: 1px dashed #8a2be2;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .pix-code {
+            font-family: monospace;
+            word-break: break-all;
+            font-size: 14px;
+            color: #e0e0e0;
+            margin: 15px 0;
+            user-select: all;
+        }
+        
+        .copy-btn {
+            background: rgba(138, 43, 226, 0.2);
+            color: #8a2be2;
+            border: 1px solid #8a2be2;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(138, 43, 226, 0.4);
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(90deg, #8a2be2, #9932cc);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 30px 0 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.4);
+        }
+        
+        .guarantee {
+            text-align: center;
+            font-size: 14px;
+            color: #b0b0b0;
+            margin-top: 30px;
+        }
+        
+        /* Modal de alerta */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid #8a2be2;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #b0b0b0;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #8a2be2;
+        }
+        
+        .steps {
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .steps li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .steps li:before {
+            content: "→";
+            color: #8a2be2;
+            position: absolute;
+            left: 0;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 140px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -70px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .modal-content {
+                width: 90%;
+                padding: 30px 20px;
+            }
+            
+            .notification, .error-notification {
+                max-width: 90%;
+                right: 5%;
+                left: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">MARKETING PRO</div>
+            <h1>Domine o Mercado Digital em 30 Dias</h1>
+            <p class="subtitle">O método completo que vai transformar sua forma de vender online, com estratégias comprovadas que geram resultados rápidos</p>
+            
+            <div class="highlight-box">
+                <strong>ÚLTIMAS VAGAS!</strong> A turma atual fecha em 48 horas. Garanta seu acesso agora com condições especiais.
+            </div>
+        </header>
+        
+      <div class="video-container">
+  <video controls autoplay loop muted>
+    <source src="imagens/videoplayback.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+</div>
+        
+        <div class="content-section">
+            <div>
+                <h2>O que você vai aprender:</h2>
+                <ul class="benefits-list">
+                    <li>Estratégias de vendas que funcionam em 2024</li>
+                    <li>Como criar campanhas no Facebook e Instagram que convertem</li>
+                    <li>Fórmula para criar anúncios de alta conversão</li>
+                    <li>Método completo de lançamento digital</li>
+                    <li>Como escalar seus resultados com automação</li>
+                    <li>Casos reais de alunos que faturaram 6 dígitos</li>
+                    <li>Acesso à comunidade exclusiva de alunos</li>
+                    <li>Suporte direto com nossos especialistas</li>
+                </ul>
+            </div>
+            
+            <div class="purchase-box">
+                <div class="pix-badge">PAGAMENTO EXCLUSIVO VIA PIX</div>
+                
+                <div class="price">
+                    <span class="original">R$ 95,00</span>
+                    R$ 24,00
+                    <span class="discount">(71% de desconto)</span>
+                </div>
+                
+                <div class="pix-container">
+                    <h3>Chave PIX (gmail):</h3>
+                    <div class="pix-code" id="pix-code">richardsonrodriguezsilva@gmail.com</div>
+                    <button class="copy-btn" id="copy-btn">
+                        <span class="tooltip">
+                            COPIAR CHAVE PIX
+                            <span class="tooltiptext" id="tooltip-text">Clique para copiar</span>
+                        </span>
+                    </button>
+                    
+                    <p style="margin-top: 20px;">Valor exato: <strong>R$ 129,00</strong></p>
+                </div>
+                
+                <p style="margin-bottom: 20px; text-align: center;">
+                    Envie o comprovante para <strong>contato@marketingpro.com.br</strong><br>
+                    Seu acesso será liberado em até 24h após a confirmação.
+                </p>
+                
+                <button id="access-btn" class="btn">ENVIAR COMPROVANTE AGORA</button>
+                
+                <div class="guarantee">
+                    <img src="https://via.placeholder.com/30" alt="Garantia" style="margin-bottom: 10px;">
+                    <p>7 dias de garantia incondicional. Se não gostar, devolvemos seu dinheiro.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Instruções -->
+    <div id="instructions-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title">COMO FINALIZAR SEU PAGAMENTO</h3>
+            
+            <ol class="steps">
+                <li><strong>Copie a chave PIX</strong> acima ou anote os dados</li>
+                <li><strong>Abra seu aplicativo bancário</strong> e selecione a opção PIX</li>
+                <li><strong>Cole a chave PIX</strong> ou digite manualmente</li>
+                <li><strong>Confirme o valor exato</strong> de R$ 129,00</li>
+                <li><strong>Realize o pagamento</strong> e aguarde a confirmação</li>
+                <li><strong>Tire um print</strong> do comprovante</li>
+                <li><strong>Clique no botão abaixo</strong> para enviar seu comprovante</li>
+            </ol>
+            
+            <button id="send-proof" class="btn" style="margin-top: 20px;">ENVIAR MEU COMPROVANTE</button>
+        </div>
+    </div>
+
+    <!-- Notificação Roxa (Sucesso) -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <div class="notification-icon">✓</div>
+            <div class="notification-text">
+                <strong>Comprovante enviado com sucesso!</strong>
+                Seu acesso será liberado em até 24h após confirmação do pagamento.
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificação Vermelha (Erro) -->
+    <div class="error-notification" id="error-notification">
+        <div class="error-content">
+            <div class="error-icon">!</div>
+            <div class="error-text">
+                <strong>Erro ao acessar!</strong>
+                Faça o pagamento primeiro e envie seu comprovante.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Elementos
+        const accessBtn = document.getElementById('access-btn');
+        const modal = document.getElementById('instructions-modal');
+        const closeModal = document.querySelector('.close-modal');
+        const sendProofBtn = document.getElementById('send-proof');
+        const copyBtn = document.getElementById('copy-btn');
+        const pixCode = document.getElementById('pix-code');
+        const tooltipText = document.getElementById('tooltip-text');
+        const notification = document.getElementById('notification');
+        const errorNotification = document.getElementById('error-notification');
+        
+        // Variável para controlar se o pagamento foi feito
+        let paymentCompleted = false;
+        
+        // Função para mostrar notificação de sucesso
+        function showSuccessNotification() {
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 5000);
+        }
+        
+        // Função para mostrar notificação de erro
+        function showErrorNotification() {
+            errorNotification.style.display = 'block';
+            setTimeout(() => {
+                errorNotification.style.display = 'none';
+            }, 5000);
+        }
+        
+        // Função para copiar chave PIX
+        copyBtn.addEventListener('click', function() {
+            // Seleciona o texto
+            const range = document.createRange();
+            range.selectNode(pixCode);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            
+            // Copia para a área de transferência
+            document.execCommand('copy');
+            
+            // Remove a seleção
+            window.getSelection().removeAllRanges();
+            
+            // Feedback visual
+            tooltipText.textContent = 'Chave copiada!';
+            copyBtn.style.backgroundColor = 'rgba(138, 43, 226, 0.6)';
+            
+            // Reseta após 2 segundos
+            setTimeout(function() {
+                tooltipText.textContent = 'Clique para copiar';
+                copyBtn.style.backgroundColor = 'rgba(138, 43, 226, 0.2)';
+            }, 2000);
+        });
+        
+        // Ao clicar no botão de acesso
+        accessBtn.addEventListener('click', function() {
+            if(paymentCompleted) {
+                // Se pagamento foi feito, mostra modal ou envia e-mail
+                modal.style.display = 'flex';
+            } else {
+                // Se não pagou, mostra notificação de erro
+                showErrorNotification();
+            }
+        });
+        
+        // Função para enviar comprovante
+        function sendProof() {
+            const subject = "Comprovante de Pagamento - Curso Marketing Pro";
+            const body = `Olá, segue em anexo meu comprovante de pagamento.\n\nNome Completo:\nCPF:\nData do Pagamento:\nValor: R$ 129,00\n\nObservações:`;
+            
+            window.location.href = `mailto:contato@marketingpro.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Marca como pago (em um sistema real, isso seria verificado pelo backend)
+            paymentCompleted = true;
+            showSuccessNotification();
+        }
+        
+        // Configura os botões de envio
+        sendProofBtn.addEventListener('click', function() {
+            sendProof();
+            modal.style.display = 'none';
+        });
+        
+        // Fechar modal
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        // Fechar ao clicar fora
+        window.addEventListener('click', function(event) {
+            if(event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
