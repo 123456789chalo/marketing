@@ -2,10 +2,477 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="imagens/CHALOX_STYLE.jpg" type="image/x-icon">
     <title>Domine o Mercado Digital | Curso Premium</title>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}body{background-color:#0a0a0a;color:#f0f0f0;line-height:1.7}.container{max-width:1100px;margin:0 auto;padding:20px;position:relative}.notification,.error-notification{display:none;position:fixed;top:20px;right:20px;color:#fff;padding:15px;border-radius:8px;box-shadow:0 5px 15px rgba(0,0,0,0.3);z-index:1001;max-width:90%;animation:slideIn .5s forwards,fadeOut .5s 4.5s forwards;transform:translateX(200%)}.notification{background:linear-gradient(135deg,#8a2be2,#6a1b9a);border-left:3px solid #fff}.error-notification{background:linear-gradient(135deg,#ff3333,#cc0000);border-left:3px solid #fff}@keyframes slideIn{to{transform:translateX(0)}}@keyframes fadeOut{to{opacity:0}}.notification-content,.error-content{display:flex;align-items:center;gap:10px}.notification-icon,.error-icon{font-size:22px}.notification-text strong,.error-text strong{display:block;font-size:16px;margin-bottom:3px}header{text-align:center;margin-bottom:30px}.logo{font-size:24px;font-weight:700;margin-bottom:10px;background:linear-gradient(90deg,#8a2be2,#9932cc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}h1{font-size:28px;font-weight:700;margin-bottom:10px;background:linear-gradient(90deg,#fff,#d8bfd8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.2}@media(min-width:768px){h1{font-size:36px}}.subtitle{font-size:16px;color:#b0b0b0;max-width:700px;margin:0 auto 20px}@media(min-width:768px){.subtitle{font-size:18px}}.highlight-box{background:rgba(138,43,226,.1);border-left:3px solid #8a2be2;padding:15px;margin:20px 0;border-radius:0 6px 6px 0}.video-container{background:linear-gradient(135deg,#1a1a1a,#0d0d0d);border-radius:8px;overflow:hidden;margin:20px 0;box-shadow:0 5px 15px rgba(138,43,226,.2);position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:#b0b0b0;border:1px solid #2a2a2a}.content-section{display:grid;grid-template-columns:1fr;gap:30px;margin:30px 0}@media(min-width:768px){.content-section{grid-template-columns:1fr 1fr}}.benefits-list{list-style:none}.benefits-list li{margin-bottom:15px;padding-left:25px;position:relative}.benefits-list li:before{content:"✓";color:#8a2be2;font-weight:700;position:absolute;left:0}.purchase-box{background:linear-gradient(135deg,#1a1a1a,#121212);border-radius:8px;padding:20px;box-shadow:0 5px 15px rgba(0,0,0,.5);border:1px solid #2a2a2a;position:relative;overflow:hidden}.purchase-box:before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#8a2be2,#9932cc)}.price{font-size:32px;font-weight:700;margin:15px 0;color:#fff;text-align:center}@media(min-width:768px){.price{font-size:42px}}.price .original{font-size:18px;color:#b0b0b0;text-decoration:line-through;margin-right:8px}@media(min-width:768px){.price .original{font-size:22px}}.price .discount{font-size:14px;color:#8a2be2;display:block;margin-top:3px}.pix-badge{background:rgba(138,43,226,.2);color:#8a2be2;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;display:inline-block;margin-bottom:15px}.pix-container{background:#1a1a1a;border:1px dashed #8a2be2;padding:15px;border-radius:6px;margin:15px 0;text-align:center}.pix-code{font-family:monospace;word-break:break-all;font-size:13px;color:#e0e0e0;margin:10px 0;user-select:all}.copy-btn{background:rgba(138,43,226,.2);color:#8a2be2;border:1px solid #8a2be2;padding:6px 12px;border-radius:4px;cursor:pointer;transition:all .3s;margin-top:8px;font-size:12px}.copy-btn:hover{background:rgba(138,43,226,.4)}.btn{display:block;width:100%;padding:15px;background:linear-gradient(90deg,#8a2be2,#9932cc);color:#fff;border:none;border-radius:6px;font-size:16px;font-weight:600;cursor:pointer;margin:20px 0 15px;text-align:center;text-decoration:none;transition:transform .3s,box-shadow .3s}.btn:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(138,43,226,.3)}.guarantee{text-align:center;font-size:12px;color:#b0b0b0;margin-top:20px}.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.8);z-index:1000;align-items:center;justify-content:center}.modal-content{background:linear-gradient(135deg,#1a1a1a,#121212);padding:20px;border-radius:8px;max-width:90%;text-align:center;border:1px solid #8a2be2;box-shadow:0 0 20px rgba(138,43,226,.4);position:relative}@media(min-width:768px){.modal-content{max-width:500px}}.close-modal{position:absolute;top:10px;right:10px;color:#b0b0b0;font-size:20px;cursor:pointer}.modal-title{font-size:20px;margin-bottom:15px;color:#8a2be2}.steps{text-align:left;margin:15px 0}.steps li{margin-bottom:12px;position:relative;padding-left:25px}.steps li:before{content:"→";color:#8a2be2;position:absolute;left:0}.tooltip{position:relative;display:inline-block}.tooltip .tooltiptext{visibility:hidden;width:120px;background-color:#555;color:#fff;text-align:center;border-radius:4px;padding:5px;position:absolute;z-index:1;bottom:125%;left:50%;margin-left:-60px;opacity:0;transition:opacity .3s;font-size:12px}.tooltip .tooltiptext::after{content:"";position:absolute;top:100%;left:50%;margin-left:-5px;border-width:5px;border-style:solid;border-color:#555 transparent transparent transparent}.tooltip:hover .tooltiptext{visibility:visible;opacity:1}</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 15px;
+            position: relative;
+        }
+        
+        /* NOTIFICAÇÃO ROXA (SUCESSO) */
+        .notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #8a2be2, #6a1b9a);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.4);
+            z-index: 1001;
+            max-width: calc(100% - 40px);
+            border-left: 5px solid #fff;
+            animation: slideIn 0.5s forwards, fadeOut 0.5s 4.5s forwards;
+            transform: translateX(200%);
+        }
+        
+        /* NOTIFICAÇÃO VERMELHA (ERRO) */
+        .error-notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff3333, #cc0000);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(255, 51, 51, 0.4);
+            z-index: 1001;
+            max-width: calc(100% - 40px);
+            border-left: 5px solid #fff;
+            animation: slideIn 0.5s forwards, fadeOut 0.5s 4.5s forwards;
+            transform: translateX(200%);
+        }
+        
+        @keyframes slideIn {
+            to { transform: translateX(0); }
+        }
+        
+        @keyframes fadeOut {
+            to { opacity: 0; }
+        }
+        
+        .notification-content, .error-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .notification-icon {
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        .error-icon {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .notification-text strong, .error-text strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #8a2be2, #9932cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        h1 {
+            font-size: clamp(28px, 6vw, 42px);
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(90deg, #ffffff, #d8bfd8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: clamp(16px, 4vw, 20px);
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+        
+        .highlight-box {
+            background: rgba(138, 43, 226, 0.1);
+            border-left: 4px solid #8a2be2;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+        }
+        
+        .video-container {
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.2);
+            position: relative;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b0b0b0;
+            border: 1px solid #2a2a2a;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .benefits-list {
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 15px;
+            padding-left: 28px;
+            position: relative;
+            font-size: 15px;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            color: #8a2be2;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .purchase-box {
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a2a2a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .purchase-box:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #8a2be2, #9932cc);
+        }
+        
+        .price {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 15px 0;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        .price .original {
+            font-size: 20px;
+            color: #b0b0b0;
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+        
+        .price .discount {
+            font-size: 16px;
+            color: #8a2be2;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .pix-badge {
+            background: rgba(138, 43, 226, 0.2);
+            color: #8a2be2;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .pix-container {
+            background: #1a1a1a;
+            border: 1px dashed #8a2be2;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .pix-code {
+            font-family: monospace;
+            word-break: break-all;
+            font-size: 13px;
+            color: #e0e0e0;
+            margin: 12px 0;
+            user-select: all;
+        }
+        
+        .copy-btn {
+            background: rgba(138, 43, 226, 0.2);
+            color: #8a2be2;
+            border: 1px solid #8a2be2;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 8px;
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        .copy-btn:hover {
+            background: rgba(138, 43, 226, 0.4);
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(90deg, #8a2be2, #9932cc);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 25px 0 15px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(138, 43, 226, 0.4);
+        }
+        
+        .guarantee {
+            text-align: center;
+            font-size: 13px;
+            color: #b0b0b0;
+            margin-top: 20px;
+        }
+        
+        /* Modal de alerta */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #8a2be2;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #b0b0b0;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .modal-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #8a2be2;
+        }
+        
+        .steps {
+            text-align: left;
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .steps li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 14px;
+        }
+        
+        .steps li:before {
+            content: "→";
+            color: #8a2be2;
+            position: absolute;
+            left: 0;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 12px;
+        }
+        
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            .content-section {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                margin: 50px 0;
+            }
+            
+            .highlight-box {
+                padding: 20px;
+                margin: 30px 0;
+                font-size: 16px;
+            }
+            
+            .video-container {
+                margin: 40px 0;
+                border-radius: 12px;
+            }
+            
+            .benefits-list li {
+                font-size: 16px;
+                margin-bottom: 18px;
+            }
+            
+            .purchase-box {
+                padding: 30px;
+                border-radius: 12px;
+            }
+            
+            .price {
+                font-size: 42px;
+            }
+            
+            .modal-content {
+                padding: 30px;
+            }
+            
+            .steps li {
+                font-size: 15px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .price {
+                font-size: 48px;
+            }
+            
+            .modal-content {
+                padding: 40px;
+            }
+        }
+        
+        /* Melhorias para touch */
+        button, .btn, .copy-btn {
+            -webkit-appearance: none;
+            touch-action: manipulation;
+        }
+        
+        /* Prevenir zoom em inputs no iOS */
+        @media screen and (max-width: 767px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,13 +480,14 @@
             <div class="logo">MARKETING PRO</div>
             <h1>Domine o Mercado Digital em 30 Dias</h1>
             <p class="subtitle">O método completo que vai transformar sua forma de vender online, com estratégias comprovadas que geram resultados rápidos</p>
+            
             <div class="highlight-box">
                 <strong>ÚLTIMAS VAGAS!</strong> A turma atual fecha em 48 horas. Garanta seu acesso agora com condições especiais.
             </div>
         </header>
         
         <div class="video-container">
-            <video controls autoplay loop muted>
+            <video controls autoplay loop muted playsinline>
                 <source src="imagens/videoplayback.mp4" type="video/mp4">
                 Seu navegador não suporta vídeos HTML5.
             </video>
@@ -42,11 +510,13 @@
             
             <div class="purchase-box">
                 <div class="pix-badge">PAGAMENTO EXCLUSIVO VIA PIX</div>
+                
                 <div class="price">
                     <span class="original">R$ 95,00</span>
                     R$ 24,00
                     <span class="discount">(71% de desconto)</span>
                 </div>
+                
                 <div class="pix-container">
                     <h3>Chave PIX (gmail):</h3>
                     <div class="pix-code" id="pix-code">richardsonrodriguezsilva@gmail.com</div>
@@ -56,15 +526,19 @@
                             <span class="tooltiptext" id="tooltip-text">Clique para copiar</span>
                         </span>
                     </button>
-                    <p style="margin-top: 15px;">Valor exato: <strong>R$ 129,00</strong></p>
+                    
+                    <p style="margin-top: 15px; font-size: 14px;">Valor exato: <strong>R$ 129,00</strong></p>
                 </div>
+                
                 <p style="margin-bottom: 15px; text-align: center; font-size: 14px;">
                     Envie o comprovante para <strong>contato@marketingpro.com.br</strong><br>
                     Seu acesso será liberado em até 24h após a confirmação.
                 </p>
+                
                 <button id="access-btn" class="btn">ENVIAR COMPROVANTE AGORA</button>
+                
                 <div class="guarantee">
-                    <img src="https://via.placeholder.com/25" alt="Garantia" style="margin-bottom: 8px;">
+                    <img src="https://via.placeholder.com/30" alt="Garantia" style="margin-bottom: 8px;">
                     <p>7 dias de garantia incondicional. Se não gostar, devolvemos seu dinheiro.</p>
                 </div>
             </div>
@@ -76,6 +550,7 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <h3 class="modal-title">COMO FINALIZAR SEU PAGAMENTO</h3>
+            
             <ol class="steps">
                 <li><strong>Copie a chave PIX</strong> acima ou anote os dados</li>
                 <li><strong>Abra seu aplicativo bancário</strong> e selecione a opção PIX</li>
@@ -85,6 +560,7 @@
                 <li><strong>Tire um print</strong> do comprovante</li>
                 <li><strong>Clique no botão abaixo</strong> para enviar seu comprovante</li>
             </ol>
+            
             <button id="send-proof" class="btn" style="margin-top: 15px;">ENVIAR MEU COMPROVANTE</button>
         </div>
     </div>
@@ -144,14 +620,23 @@
         
         // Função para copiar chave PIX
         copyBtn.addEventListener('click', function() {
+            // Seleciona o texto
             const range = document.createRange();
             range.selectNode(pixCode);
             window.getSelection().removeAllRanges();
             window.getSelection().addRange(range);
+            
+            // Copia para a área de transferência
             document.execCommand('copy');
+            
+            // Remove a seleção
             window.getSelection().removeAllRanges();
+            
+            // Feedback visual
             tooltipText.textContent = 'Chave copiada!';
             copyBtn.style.backgroundColor = 'rgba(138, 43, 226, 0.6)';
+            
+            // Reseta após 2 segundos
             setTimeout(function() {
                 tooltipText.textContent = 'Clique para copiar';
                 copyBtn.style.backgroundColor = 'rgba(138, 43, 226, 0.2)';
@@ -161,8 +646,11 @@
         // Ao clicar no botão de acesso
         accessBtn.addEventListener('click', function() {
             if(paymentCompleted) {
+                // Se pagamento foi feito, mostra modal ou envia e-mail
                 modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
             } else {
+                // Se não pagou, mostra notificação de erro
                 showErrorNotification();
             }
         });
@@ -171,7 +659,10 @@
         function sendProof() {
             const subject = "Comprovante de Pagamento - Curso Marketing Pro";
             const body = `Olá, segue em anexo meu comprovante de pagamento.\n\nNome Completo:\nCPF:\nData do Pagamento:\nValor: R$ 129,00\n\nObservações:`;
+            
             window.location.href = `mailto:contato@marketingpro.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Marca como pago (em um sistema real, isso seria verificado pelo backend)
             paymentCompleted = true;
             showSuccessNotification();
         }
@@ -180,19 +671,44 @@
         sendProofBtn.addEventListener('click', function() {
             sendProof();
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         });
         
         // Fechar modal
         closeModal.addEventListener('click', function() {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         });
         
         // Fechar ao clicar fora
         window.addEventListener('click', function(event) {
             if(event.target == modal) {
                 modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
+        
+        // Prevenir zoom em double-tap no iOS
+        document.addEventListener('dblclick', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+        
+        // Melhorar performance de animações
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.container > *').forEach(el => {
+                el.style.opacity = 0;
+                el.style.transition = 'opacity 0.5s ease';
+                observer.observe(el);
+            });
+        }
     </script>
 </body>
 </html>
